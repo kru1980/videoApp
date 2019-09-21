@@ -18,6 +18,16 @@ router.get("/register", (req, res) => {
   res.render("users/register");
 });
 
+// login form POSt
+
+router.post("/login", (req, res, next) => {
+  passport.authenticate("local", {
+    successRedirect: "/ideas",
+    failureRedirect: "/users/login",
+    failureFlash: true
+  })(req, res, next);
+});
+
 // register form POSt
 router.post("/register", (req, res) => {
   const { name, email, password, password2 } = req.body;
@@ -66,6 +76,13 @@ router.post("/register", (req, res) => {
       }
     });
   }
+});
+
+// logout
+router.get("/logout", (req, res) => {
+  req.logout();
+  req.flash("success_msg", "Вы успешно вышли из приложения");
+  res.redirect("/users/login");
 });
 
 module.exports = router;
