@@ -1,5 +1,3 @@
-// const config = require("config");
-
 if (process.env.NODE_ENV === "production") {
   module.exports = {
     mongoURI:

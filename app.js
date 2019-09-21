@@ -10,13 +10,12 @@ const flash = require("connect-flash");
 //load routs
 const ideas = require("./routs/ideas");
 const users = require("./routs/users");
-const config = require("config");
 
 // passport config
 require("./config/passport")(passport);
 // db config
 
-// const db = require("./config/db");
+const db = require("./config/db");
 
 const PORT = process.env.PORT || 5000;
 
@@ -25,7 +24,7 @@ const app = express();
 // mongoose
 mongoose.Promise = global.Promise; // почитать!!
 mongoose
-  .connect(config.get("mongoURI"), {
+  .connect(db.mongoURI, {
     // useMongoClient: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
