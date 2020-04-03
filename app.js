@@ -15,7 +15,10 @@ const users = require("./routs/users");
 require("./config/passport")(passport);
 // db config
 
-const db = require("./config/db");
+// const db = require("./config/db");
+const 
+mongoURI= "mongodb://localhost/videoapp" 
+
 
 const PORT = process.env.PORT || 5000;
 
@@ -24,7 +27,7 @@ const app = express();
 // mongoose
 mongoose.Promise = global.Promise; // почитать!!
 mongoose
-  .connect(db.mongoURI, {
+  .connect(mongoURI, {
     // useMongoClient: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
