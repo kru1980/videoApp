@@ -1,0 +1,50 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended",
+       "prettier",
+       "node",
+       "plugin:import/errors",
+       "plugin:import/warnings",
+       "plugin:promise/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2015
+    },
+    "plugins": ["promise"],
+  
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "rules": {
+      "node/exports-style": ["error", "module.exports"],
+      "node/file-extension-in-import": ["error", "always"],
+      "node/prefer-global/buffer": ["error", "always"],
+      "node/prefer-global/console": ["error", "always"],
+      "node/prefer-global/process": ["error", "always"],
+      "node/prefer-global/url-search-params": ["error", "always"],
+      "node/prefer-global/url": ["error", "always"],
+      "node/prefer-promises/dns": "error",
+      "node/prefer-promises/fs": "error",
+      "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+      "import/named": 2,
+      "import/namespace": 2,
+      "import/default": 2,
+      "import/export": 2,
+      "promise/always-return": "error",
+      "promise/no-return-wrap": "error",
+      "promise/param-names": "error",
+      "promise/catch-or-return": "error",
+      "promise/no-native": "off",
+      "promise/no-nesting": "warn",
+      "promise/no-promise-in-callback": "warn",
+      "promise/no-callback-in-promise": "warn",
+      "promise/avoid-new": "warn",
+      "promise/no-new-statics": "error",
+      "promise/no-return-in-finally": "warn",
+      "promise/valid-params": "warn"
+    }
+  }
+  
