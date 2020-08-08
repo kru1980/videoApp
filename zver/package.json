@@ -1,0 +1,19 @@
+{
+  "name": "zver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel serve index.html --port 5000 --open",
+    "build": "parcel build index.html",
+    "start": "node index.html -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.26.10"
+  }
+}
