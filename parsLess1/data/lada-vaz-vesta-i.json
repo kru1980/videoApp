@@ -1,0 +1,13 @@
+{
+    "title": "LADA (ВАЗ) Vesta I",
+    "url": "https://auto.ru/catalog/cars/vaz/vesta/",
+    "code": "lada-vaz-vesta-i",
+    "priceNew": {
+        "low": 653900,
+        "high": 994900
+    },
+    "period": {
+        "start": 2015,
+        "end": null
+    }
+}
